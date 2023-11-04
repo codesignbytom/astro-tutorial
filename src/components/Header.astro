@@ -1,7 +1,14 @@
 ---
-import Hamburger from "./Hamburger.astro";
+import OpenMenuButton from "./OpenMenuButton.astro";
 import Navigation from "./Navigation.astro";
 ---
 
-<Hamburger />
-<Navigation />
+<header class="border-b pb-6">
+  <div class="flex justify-between items-center">
+    <a href="/" class="text-2xl font-medium tracking-wide leading-none">
+      Astro
+    </a>
+    <OpenMenuButton />
+  </div>
+  <Navigation />
+</header>

@@ -1,7 +1,26 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPostPreview from "../components/BlogPostPreview.astro";
+const allPosts = await Astro.glob("../pages/posts/*.md");
+
 ---
 
-<BaseLayout pageTitle="Homepage">
-  <h2>My awesome blog subtitle</h2>
+<BaseLayout>
+  {
+    allPosts.length >= 0 ? (
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 lg:gap-16">
+        {allPosts.map((post) => (
+          <BlogPostPreview
+            image={post.frontmatter.image}
+            url={post.url}
+            title={post.frontmatter.title}
+          />
+        ))}
+      </div>
+    ) : (
+      <div class="text-center">
+        <h1 class="text-4xl font-bold">No posts yet</h1>
+      </div>
+    )
+  }
 </BaseLayout>
