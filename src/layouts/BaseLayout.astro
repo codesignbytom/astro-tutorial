@@ -13,7 +13,7 @@ const { pageTitle } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-    <script is:global src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script is:inline src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body class="bg-amber-50 text-black max-w-7xl mx-auto w-full p-6">
     <Header />
