@@ -30,3 +30,12 @@ h5 {
 h6 {
   font-size: clamp(0.75rem, 1vw, 1rem);
 }
+
+html.dark {
+  background-color: #0d0950;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
