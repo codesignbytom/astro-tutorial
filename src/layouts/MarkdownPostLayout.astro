@@ -1,24 +1,41 @@
 ---
+import { date } from "astro/zod";
 import BaseLayout from "../layouts/BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout visible={false}>
-  <h1>{frontmatter.title}</h1>
-  <p>Published on: {frontmatter.pubDate.slice(0, 10)}</p>
-  <p>Written by <a class="text-indigo-600 underline" href="/about/">{frontmatter.author}</a></p>
-  <div class="tags">
-    <h2>Tags</h2>
-    <ul>
+  <div class="flex flex-col gap-6">
+    <div class="flex flex-col gap-4">
+      <h1>{frontmatter.title}</h1>
+      <div class="flex items-center gap-6">
+        <div class="flex items-center gap-2 font-medium">
+          <i class="ph ph-calendar text-xl"></i>
+          <span>{frontmatter.pubDate.slice(0, 10)}</span>
+        </div>
+        <div class="flex items-center gap-2 font-medium">
+          <i class="ph ph-user text-xl"></i>
+          <a class="text-indigo-600" href="/about/">{frontmatter.author}</a>
+        </div>
+      </div>
+    </div>
+
+    <ul class="flex items-center gap-3 capitalize">
       {
         frontmatter.tags.map((tag) => (
           <li>
-            <a href={`/tags/${tag}`}>{tag}</a>
+            <a
+              class="border border-black/20 p-2 rounded-sm hover:bg-black hover:text-white transition-colors"
+              href={`/tags/${tag}`}
+            >
+              {tag}
+            </a>
           </li>
         ))
       }
     </ul>
+
+    <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+    <slot />
   </div>
-  <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
-  <slot />
 </BaseLayout>
