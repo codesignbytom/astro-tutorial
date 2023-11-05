@@ -15,6 +15,8 @@ const allPosts = await Astro.glob("../pages/posts/*.md");
             url={post.url}
             title={post.frontmatter.title}
             excerpt={post.frontmatter.description}
+            author={post.frontmatter.author}
+            pubDate={post.frontmatter.pubDate}
           />
         ))}
       </div>
