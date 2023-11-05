@@ -1,7 +1,6 @@
 ---
 import OpenMenuButton from "./OpenMenuButton.astro";
 import Navigation from "./Navigation.astro";
-import ThemeToggleIcon from "./ThemeToggle.astro";
 ---
 
 <header class="border-b pb-6">
@@ -9,10 +8,7 @@ import ThemeToggleIcon from "./ThemeToggle.astro";
     <a href="/" class="text-2xl font-medium tracking-wide leading-none">
       Astro
     </a>
-    <div class="flex gap-8">
-      <ThemeToggleIcon />
-      <OpenMenuButton />
-    </div>
+    <OpenMenuButton />
   </div>
   <Navigation />
 </header>
