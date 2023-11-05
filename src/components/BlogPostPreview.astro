@@ -7,12 +7,12 @@ const { title, url, image, alt, excerpt, author, pubDate } = Astro.props;
     <img class="border-0 aspect-square object-cover" src={image} alt={alt} />
   </a>
   <div class="flex flex-col gap-3">
-    <a class="hover:text-amber-500" href={url}>
+    <a class="hover:text-teal-500" href={url}>
       <h3>{title}</h3>
     </a>
     <div class="flex gap-4">
       <div class="flex items-center gap-2 font-medium">
-        <i class="ph ph-calendar text-amber-500 text-xl"></i>
+        <i class="ph ph-calendar text-teal-500 text-xl"></i>
         <time datetime={pubDate}
           >{
             new Date(pubDate).toLocaleDateString("en-US", {
@@ -24,7 +24,7 @@ const { title, url, image, alt, excerpt, author, pubDate } = Astro.props;
         >
       </div>
       <div class="flex items-center gap-2 font-medium">
-        <i class="ph ph-user-circle text-amber-500 text-xl"></i>
+        <i class="ph ph-user-circle text-teal-500 text-xl"></i>
         <a href="/about/">{author}</a>
       </div>
     </div>
