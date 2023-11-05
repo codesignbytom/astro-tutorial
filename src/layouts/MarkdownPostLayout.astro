@@ -7,14 +7,22 @@ const { frontmatter } = Astro.props;
   <div class="flex flex-col gap-6">
     <div class="flex flex-col gap-4">
       <h1>{frontmatter.title}</h1>
-      <div class="flex items-center gap-6">
+      <div class="flex gap-4">
         <div class="flex items-center gap-2 font-medium">
-          <i class="ph ph-calendar text-xl"></i>
-          <span>{frontmatter.pubDate.slice(0, 10)}</span>
+          <i class="ph ph-calendar text-amber-500 text-xl"></i>
+          <time datetime={frontmatter.pubDate}
+            >{
+              new Date(frontmatter.pubDate).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })
+            }</time
+          >
         </div>
         <div class="flex items-center gap-2 font-medium">
-          <i class="ph ph-user text-xl"></i>
-          <a class="text-amber-500" href="/about/">{frontmatter.author}</a>
+          <i class="ph ph-user-circle text-amber-500 text-xl"></i>
+          <a href="/about/">{frontmatter.author}</a>
         </div>
       </div>
     </div>
