@@ -7,6 +7,9 @@ const { frontmatter } = Astro.props;
   <div class="flex flex-col gap-6">
     <div class="flex flex-col gap-8">
       <h1>{frontmatter.title}</h1>
+
+      <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+
       <div class="flex gap-4">
         <div class="flex items-center gap-2 font-medium">
           <i class="ph ph-calendar text-amber-500 text-xl"></i>
