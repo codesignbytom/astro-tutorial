@@ -30,3 +30,7 @@ h5 {
 h6 {
   font-size: clamp(1rem, 1vw, 1.25rem);
 }
+
+p {
+  @apply font-normal leading-relaxed;
+}
