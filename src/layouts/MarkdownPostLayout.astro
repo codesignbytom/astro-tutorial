@@ -4,49 +4,52 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout visible={false}>
-  <div class="flex flex-col gap-6">
-    <div class="flex flex-col gap-8">
+  <div class="flex flex-col gap-8 lg:gap-12">
+    <div class="flex flex-col gap-6 lg:gap-8">
       <h1>{frontmatter.title}</h1>
 
-      <img
-        class="aspect-square sm:aspect-video object-cover rounded-xl"
-        src={frontmatter.image.url}
-        alt={frontmatter.image.alt}
-      />
-
-      <div class="flex gap-4">
-        <div class="flex items-center gap-2 font-medium">
-          <i class="ph ph-calendar text-teal-500 text-xl"></i>
-          <time datetime={frontmatter.pubDate}
-            >{
-              new Date(frontmatter.pubDate).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })
-            }</time
-          >
+      <div class="flex flex-col gap-4 lg:flex-row lg:justify-between">
+        <div class="flex gap-4">
+          <div class="flex items-center gap-2 font-medium">
+            <i class="ph ph-calendar text-teal-500 text-xl"></i>
+            <time datetime={frontmatter.pubDate}
+              >{
+                new Date(frontmatter.pubDate).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })
+              }</time
+            >
+          </div>
+          <div class="flex items-center gap-2 font-medium">
+            <i class="ph ph-user-circle text-teal-500 text-xl"></i>
+            <a href="/about/">{frontmatter.author}</a>
+          </div>
         </div>
-        <div class="flex items-center gap-2 font-medium">
-          <i class="ph ph-user-circle text-teal-500 text-xl"></i>
-          <a href="/about/">{frontmatter.author}</a>
+
+        <div class="flex flex-wrap items-center gap-3 capitalize">
+          {
+            frontmatter.tags.map((tag) => (
+              <a
+                class="border border-slate-950/20 text-sm dark:border-white/20 rounded-md py-1 px-3 flex items-center justify-center hover:border-transparent hover:bg-teal-500 hover:text-slate-950 transition-colors"
+                href={`/tags/${tag}`}
+              >
+                {tag}
+              </a>
+            ))
+          }
         </div>
       </div>
     </div>
+    <img
+      class="aspect-square sm:aspect-video object-cover rounded-xl"
+      src={frontmatter.image.url}
+      alt={frontmatter.image.alt}
+    />
 
-    <div class="flex flex-wrap items-center gap-3 capitalize">
-      {
-        frontmatter.tags.map((tag) => (
-          <a
-            class="border border-white-950/20 text-sm py-1 px-3 flex items-center justify-center hover:border-transparent hover:bg-teal-500 hover:text-slate-950 transition-colors"
-            href={`/tags/${tag}`}
-          >
-            {tag}
-          </a>
-        ))
-      }
+    <div class="max-w-3xl mx-auto">
+      <slot />
     </div>
-
-    <slot />
   </div>
 </BaseLayout>
