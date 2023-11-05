@@ -4,6 +4,10 @@ import Header from "../components/Header.astro";
 import "../assets/index.css";
 
 const { pageTitle } = Astro.props;
+
+// Vendor imports
+import "@phosphor-icons/web/light";
+import "@phosphor-icons/web/regular";
 ---
 
 <html lang="en" class="bg-slate-950 text-white">
@@ -23,8 +27,6 @@ const { pageTitle } = Astro.props;
       </div>
     </main>
     <Footer />
-    <script>
-      import "../assets/js/index.js";
-    </script>
+    <script is:inline src="../src/assets/js/menu.js"></script>
   </body>
 </html>
