@@ -4,7 +4,7 @@ const { title, url, image, alt, excerpt } = Astro.props;
 
 <div class="flex flex-col gap-4">
   <img class="bg-black aspect-square object-cover" src={image} alt={alt} />
-  <a class="hover:text-indigo-700" href={url}>
+  <a class="hover:text-amber-600" href={url}>
     <h3>{title}</h3>
   </a>
   <p class="text-black/50">{excerpt}</p>
