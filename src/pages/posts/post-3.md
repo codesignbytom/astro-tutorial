@@ -1,13 +1,13 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: My Third Blog Post
-author: Astro Learner
-description: "I had some challenges, but asking in the community really helped!"
+title: The Role of Color Psychology
+author: Tom
+description: "Colors speak a silent language that influences the heart and mind. In web design, the right color palette can turn a casual browser into a loyal customer. It's not just about aesthetics; it's about invoking the right emotions and setting the tone for your brand's story."
 image:
-  url: "https://docs.astro.build/assets/rays.webp"
-  alt: "Thumbnail of Astro rays."
+  url: "https://images.unsplash.com/photo-1550859492-d5da9d8e45f3?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  alt: "Gradient of colors."
 pubDate: 2022-07-15
-tags: ["astro", "learning in public", "setbacks", "community"]
+tags: ["Color Psychology", "Branding", "User Engagement", "Design Principles"]
 ---
 
 It wasn't always smooth sailing, but I'm enjoying building with Astro. And, the [Discord community](https://astro.build/chat) is really friendly and helpful!
