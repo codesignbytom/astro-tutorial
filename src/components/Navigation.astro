@@ -4,11 +4,15 @@
 
 <nav
   id="menu"
-  class="transition-width duration-700 bg-indigo-900 text-white z-50 fixed w-0 -left-full top-0 h-full flex flex-col gap-8 items-start p-10 justify-center"
+  class="transition-width duration-700 bg-white text-black z-50 fixed w-0 -left-full top-0 h-full flex flex-col gap-8 items-start p-10"
 >
-  <h2>Navigation</h2>
-  <div class="flex flex-col gap-4 text-2xl font-light">
-    <a href="/">Home</a>
+  <h2 class="w-full border-b border-black pb-4">Navigation</h2>
+  <div class="flex flex-col gap-4 text-2xl w-full">
+    <a
+      href="/"
+      class="flex flex-col relative group after:h-px h-full after:absolute pb-2 after:bottom-2 after:w-0 group-hover:after:w-full after:bg-black w-full"
+      >Home</a
+    >
     <a href="/about/">About</a>
     <a href="/blog/">Blog</a>
     <a href="/tags/">Tags</a>
