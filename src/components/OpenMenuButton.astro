@@ -4,10 +4,10 @@
 
 <button
   id="open-menu-button"
-  class="flex flex-col gap-1.5 group bg-amber-600 relative p-2 items-end justify-center rounded-full w-12 h-12"
+  class="flex flex-col group gap-1.5 group text-black text-2xl bg-amber-500 data-[checked='true']:bg-amber-600 transition-all hover:bg-amber-600 relative p-2 items-center justify-center rounded-full w-12 h-12"
+  data-checked="false"
 >
-  <span class="bg-slate-50 w-full h-0.5 rounded-full"></span>
-  <span
-    class="bg-slate-50 w-2/3 group-hover:w-full transition-all h-0.5 rounded-full"
-  ></span>
+  <i
+    class="ph ph-list group-hover:rotate-45 group-data-[checked='true']:rotate-45 transition-transform"
+  ></i>
 </button>

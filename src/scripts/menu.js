@@ -1,5 +1,6 @@
 const menu = document.querySelector("#menu");
 const openMenuButton = document.querySelector("#open-menu-button");
+const openMenuButtonIcon = document.querySelector("#open-menu-button i");
 
 document.addEventListener("astro:page-load", () => {
   openMenuButton.addEventListener("click", () => {
@@ -7,5 +8,8 @@ document.addEventListener("astro:page-load", () => {
     menu.classList.toggle("w-0");
     menu.classList.toggle("-left-full");
     menu.classList.toggle("left-0");
+
+    const isChecked = openMenuButton.getAttribute("data-checked") === "true";
+    openMenuButton.setAttribute("data-checked", !isChecked);
   });
 });
