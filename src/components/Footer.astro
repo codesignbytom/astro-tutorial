@@ -2,8 +2,15 @@
 import FooterSocialListItem from "./FooterSocialListItem.astro";
 ---
 
-<footer class="flex items-center gap-3 pb-6">
-  <FooterSocialListItem platform="twitter" username="astrodotbuild" />
-  <FooterSocialListItem platform="github" username="withastro" />
-  <FooterSocialListItem platform="youtube" username="astrodotbuild" />
+<footer class="border-t border-white">
+  <div class="container max-w-7xl mx-auto p-6 flex justify-between items-center gap-6">
+    <span class="text-sm text-white/50"
+      >© {new Date().getFullYear()} The Astro Way. All rights reserved.</span
+    >
+    <div class="flex items-center gap-4">
+      <FooterSocialListItem platform="twitter" username="astrodotbuild" />
+      <FooterSocialListItem platform="github" username="withastro" />
+      <FooterSocialListItem platform="youtube" username="astrodotbuild" />
+    </div>
+  </div>
 </footer>
