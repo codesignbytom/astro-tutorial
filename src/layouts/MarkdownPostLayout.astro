@@ -6,8 +6,7 @@ const { frontmatter } = Astro.props;
 <BaseLayout visible={false}>
   <h1>{frontmatter.title}</h1>
   <p>Published on: {frontmatter.pubDate.slice(0, 10)}</p>
-  <p><em>{frontmatter.description}</em></p>
-  <p>Written by {frontmatter.author}</p>
+  <p>Written by <a class="text-indigo-600 underline" href="/about/">{frontmatter.author}</a></p>
   <div class="tags">
     <h2>Tags</h2>
     <ul>
