@@ -1,4 +1,5 @@
 ---
+import Tag from "../components/Tag.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
@@ -27,18 +28,8 @@ const { frontmatter } = Astro.props;
             <a href="/about/">{frontmatter.author}</a>
           </div>
         </div>
-
         <div class="flex flex-wrap items-center gap-3 capitalize">
-          {
-            frontmatter.tags.map((tag) => (
-              <a
-                class="border border-slate-950/20 text-sm dark:border-white/20 rounded-md py-1 px-3 flex items-center justify-center hover:border-transparent hover:bg-teal-500 hover:text-slate-950 transition-colors"
-                href={`/tags/${tag}`}
-              >
-                {tag}
-              </a>
-            ))
-          }
+          {frontmatter.tags.map((tag) => <Tag tagTitle={tag} />)}
         </div>
       </div>
     </div>

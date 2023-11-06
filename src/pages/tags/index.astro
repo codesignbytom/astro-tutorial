@@ -1,19 +1,23 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogPostPreview from "../../components/BlogPostPreview.astro";
+import Tag from "../../components/Tag.astro";
 
 const allPosts = await Astro.glob("../posts/*.md");
 const tags = [...new Set(allPosts.flatMap((post) => post.frontmatter.tags))];
 ---
 
 <BaseLayout pageTitle="All tags">
-  <div class="grid grid-cols-2 gap-4">
-    {
-      tags.map((tag) => (
-        <>
-          <BlogPostPreview url={`/tags/${tag}`} title={tag} />
-        </>
-      ))
-    }
-  </div>
+  {
+    tags.length >= 0 ? (
+      <div class="grid sm:grid-cols-4 gap-2 sm:gap-4 md:gap-6">
+        {tags.map((tag) => (
+          <Tag tagTitle={tag} />
+        ))}
+      </div>
+    ) : (
+      <div class="text-center">
+        <h2>No posts yet</h2>
+      </div>
+    )
+  }
 </BaseLayout>
