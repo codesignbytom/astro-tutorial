@@ -1,5 +1,5 @@
-# The Astro Way: A Customized Astro Tutorial Blog
+<h1>The Astro Way: A Customized Astro Tutorial Blog</h1>
 
 A simple blog made and customized during and after the Astro blog tutorial.
 
-https://theastroway.netlify.app/
+<a href="https://theastroway.netlify.app/" target="_blank">Click here to see it in action!</a>
