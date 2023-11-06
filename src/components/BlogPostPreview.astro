@@ -2,7 +2,7 @@
 const { title, url, image, alt, excerpt, author, pubDate } = Astro.props;
 ---
 
-<div id="blog-post-preview" class="flex flex-col gap-4">
+<div id="blog-post-preview" class="flex flex-col gap-4 sm:gap-6">
   <a href={url}>
     <img
       class="aspect-square w-full h-full object-cover rounded-md"
@@ -10,28 +10,30 @@ const { title, url, image, alt, excerpt, author, pubDate } = Astro.props;
       alt={alt}
     />
   </a>
-  <div class="flex flex-col gap-3">
-    <a class="hover:text-teal-500" href={url}>
-      <h3>{title}</h3>
-    </a>
-    <div class="flex gap-4">
-      <div class="flex items-center gap-2 font-medium">
-        <i class="ph ph-calendar text-teal-500 text-xl"></i>
-        <time datetime={pubDate}
-          >{
-            new Date(pubDate).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })
-          }</time
-        >
-      </div>
-      <div class="flex items-center gap-2 font-medium">
-        <i class="ph ph-user-circle text-teal-500 text-xl"></i>
-        <a href="/about/">{author}</a>
+  <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-2">
+      <a class="hover:text-teal-500" href={url}>
+        <h3>{title}</h3>
+      </a>
+      <div class="flex gap-4">
+        <div class="flex items-center gap-2 font-medium">
+          <i class="ph ph-calendar text-teal-500 text-xl"></i>
+          <time datetime={pubDate}
+            >{
+              new Date(pubDate).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })
+            }</time
+          >
+        </div>
+        <div class="flex items-center gap-2 font-medium">
+          <i class="ph ph-user-circle text-teal-500 text-xl"></i>
+          <a href="/about/">{author}</a>
+        </div>
       </div>
     </div>
-    <p>{excerpt}</p>
+    <p class="line-clamp-4 max-w-4xl">{excerpt}</p>
   </div>
 </div>

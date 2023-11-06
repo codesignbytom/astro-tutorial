@@ -9,7 +9,7 @@ const allPosts = await Astro.glob("../pages/posts/*.md");
     allPosts.length >= 0 ? (
       <div
         id="post-grid"
-        class="grid sm:grid-cols-2 gap-6 md:gap-12 lg:gap-16 xl:gap-24"
+        class="grid sm:grid-cols-2 gap-6 lg:gap-16 xl:gap-24"
       >
         {allPosts.map((post) => (
           <BlogPostPreview
