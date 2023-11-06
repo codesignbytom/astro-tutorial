@@ -11,7 +11,7 @@ const { frontmatter } = Astro.props;
       <div class="flex flex-col gap-4 lg:flex-row lg:justify-between">
         <div class="flex gap-4">
           <div class="flex items-center gap-2 font-medium">
-            <i class="ph ph-calendar text-teal-500 text-xl"></i>
+            <i class="ph-fill ph-calendar text-teal-500 text-xl"></i>
             <time datetime={frontmatter.pubDate}
               >{
                 new Date(frontmatter.pubDate).toLocaleDateString("en-US", {
@@ -23,7 +23,7 @@ const { frontmatter } = Astro.props;
             >
           </div>
           <div class="flex items-center gap-2 font-medium">
-            <i class="ph ph-user-circle text-teal-500 text-xl"></i>
+            <i class="ph-fill ph-user-circle text-teal-500 text-xl"></i>
             <a href="/about/">{frontmatter.author}</a>
           </div>
         </div>
