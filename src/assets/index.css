@@ -41,3 +41,11 @@ p {
   font-size: clamp(1rem, 1vw, 1.125rem);
   @apply font-normal leading-relaxed;
 }
+
+#post-grid #blog-post-preview:nth-of-type(3n) {
+  @apply sm:col-span-2;
+}
+
+#post-grid #blog-post-preview:nth-of-type(3n) img {
+  @apply aspect-video;
+}
