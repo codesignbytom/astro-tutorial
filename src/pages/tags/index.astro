@@ -9,7 +9,7 @@ const tags = [...new Set(allPosts.flatMap((post) => post.frontmatter.tags))];
 <BaseLayout pageTitle="All tags">
   {
     tags.length >= 0 ? (
-      <div class="grid sm:grid-cols-4 gap-2 sm:gap-4 md:gap-6">
+      <div class="flex flex-wrap gap-2 sm:gap-4">
         {tags.map((tag) => (
           <Tag tagTitle={tag} />
         ))}
