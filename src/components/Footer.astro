@@ -4,12 +4,13 @@ import FooterSocialListItem from "./FooterSocialListItem.astro";
 
 <footer class="border-t border-slate-950/20 dark:border-white/20">
   <div
-    class="container py-6 flex justify-between items-center gap-6"
+    class="container py-6 flex flex-col sm:flex-row sm:justify-between justify-center items-center gap-6"
   >
-    <span class="text-sm text-slate-950/50 dark:text-white/50"
+    <span
+      class="text-sm text-slate-950/50 dark:text-white/50 order-2 sm:order-1"
       >© {new Date().getFullYear()} The Astro Way. All rights reserved.</span
     >
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-4 order-1 sm:order-2">
       <FooterSocialListItem platform="twitter" username="astrodotbuild" />
       <FooterSocialListItem platform="github" username="withastro" />
       <FooterSocialListItem platform="youtube" username="astrodotbuild" />
