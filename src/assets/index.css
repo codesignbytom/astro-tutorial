@@ -47,5 +47,5 @@ p {
 }
 
 #post-grid #blog-post-preview:nth-of-type(3n) img {
-  @apply aspect-video;
+  @apply sm:aspect-video;
 }
