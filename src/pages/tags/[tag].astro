@@ -30,7 +30,7 @@ const { posts } = Astro.props;
 <BaseLayout pageTitle={tag}>
   {
     posts.length >= 0 ? (
-      <div id="post-grid" class="grid sm:grid-cols-2 gap-6 lg:gap-16 xl:gap-24">
+      <div id="post-grid" class="grid sm:grid-cols-2 gap-6 lg:gap-12">
         {posts.map((post) => (
           <BlogPostPreview
             image={post.frontmatter.image.url}
