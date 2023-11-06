@@ -11,4 +11,3 @@ tags: ["Accessibility", "Inclusivity", "WCAG", "User-Centric Design"]
 ---
 
 Accessibility isn't just a trend in web design; it's a fundamental aspect that ensures inclusivity for all users, including those with disabilities. By adhering to Web Content Accessibility Guidelines (WCAG), designers can create websites that are navigable and comprehensible for everyone. This includes considerations like keyboard navigation, alt text for images, and sufficient color contrast. Inclusive design not only broadens a website's reach but also reflects a brand's commitment to diversity and equality.
-6
