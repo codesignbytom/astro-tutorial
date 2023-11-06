@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: Accessibility in Web Design
 author: Tom
 description: "Web accessibility is not a feature; it's a fundamental right. By designing for all users, we create a digital world that's inclusive, egalitarian, and respectful. It's about building bridges across the digital divide and ensuring everyone has equal access to information and technology."

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: The Role of Color Psychology
 author: Tom
 description: "Colors speak a silent language that influences the heart and mind. In web design, the right color palette can turn a casual browser into a loyal customer. It's not just about aesthetics; it's about invoking the right emotions and setting the tone for your brand's story."

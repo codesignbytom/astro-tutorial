@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: "The Importance of Responsive Design"
 pubDate: 2023-11-05
 description: "In the age of smartphones and tablets, a website that can't adapt to different screen sizes is like a book that can't be opened. Responsive design ensures your website is accessible and enjoyable for every visitor, no matter their device."

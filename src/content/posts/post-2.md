@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: Minimalism in Web Design
 author: Tom
 description: "Less is more in modern web design. A minimalist approach strips away the unnecessary, leaving only what's essential. It's the art of knowing how much is just enough to create a website that's both visually stunning and incredibly user-friendly."
